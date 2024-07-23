@@ -1,0 +1,16 @@
+__pycache__/
+.azureml/
+.cache/
+.*/
+Desktop/
+junki/
+notebooks/
+pseudo_data/
+runs/
+.b*
+.e*
+.p*
+.w*
+*.yaml
+yolov8n.pt
+*.mp4
