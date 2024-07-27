@@ -2,6 +2,8 @@
 
 This project focuses on training YOLO models using labeled data and pseudo-labeled data generated from videos. The repository includes scripts for creating dataset configurations, training models, generating pseudo-labels, and visualizing predictions.
 
+url for the model weights: [best.pt](url)
+
 ## Project Structure
 
 - `train.py`: Trains a YOLO model using the original labeled dataset.
@@ -27,13 +29,6 @@ This project focuses on training YOLO models using labeled data and pseudo-label
     ```
 
 ## Usage
-
-### Create YAML Configuration Files
-
-Generate the YAML configuration files for the original and combined datasets:
-```sh
-python create_yamls.py
-```
 
 ### Train YOLO Model on Original Dataset
 
@@ -82,10 +77,6 @@ python predict.py
 - torch
 - torchvision
 - ultralytics==8.2.62
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
