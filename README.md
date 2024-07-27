@@ -80,6 +80,6 @@ python predict.py
 
 ## Acknowledgments
 
-- [Ultralytics YOLO](https://github.com/ultralytics/yolov8) for the YOLO model implementation.
+- [Ultralytics YOLO](https://docs.ultralytics.com/) for the YOLO model implementation.
 
 ---
