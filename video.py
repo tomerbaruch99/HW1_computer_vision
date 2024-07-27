@@ -2,8 +2,9 @@ import cv2
 from ultralytics import YOLO
 import os
 import shutil
+import argparse
 
-def visualize_predictions(video_path, output_path, model, classid_classname, confidence_threshold=0.4, save_dir='./ood_vid_predictions'):
+def visualize_predictions(video_path, output_path, model, classid_classname, confidence_threshold=0.4, save_dir='./video_predictions'):
     results = model(video_path, stream=True, device=0)
     first_frame = next(results)
     frame = first_frame.orig_img
@@ -58,10 +59,18 @@ if __name__ == '__main__':
     # model = YOLO('./runs/detect/train8/weights/best.pt') # ood_predictions5 # train7 --> train8 both id
     # model = YOLO('./runs/detect/train10/weights/best.pt') # ood_prediction6 # train9 --> train10 both id
 
-    model = YOLO('./runs/detect/train12/weights/best.pt') # ood_predictions1 # train3 --> train5 both id
+    # ood_video = '/datashare/HW1/ood_video_data/4_2_24_A_1.mp4'
+
+    parser = argparse.ArgumentParser(description="Visualize YOLO Predictions on a Video")
+    parser.add_argument('--video', type=str, required=True, help="Path to the video file")
+    args = parser.parse_args()
+    if not args.video:
+        print("Please provide the path to the video file")
+        exit()
+
+    model = YOLO('./runs/detect/train13/weights/best.pt') # ood_predictions1 # train3 --> train5 both id
     classid_classname = {0: 'Empty', 1: 'Tweezers', 2: 'Needle_driver'}
 
-    ood_video = '/datashare/HW1/ood_video_data/4_2_24_A_1.mp4'
-    visualize_predictions(ood_video, './ood_predictions_0.4.mp4', model, classid_classname)
+    visualize_predictions(args.video, './video_predictions.mp4', model, classid_classname)
 
 # RUN  with 0.4 threshold

@@ -55,14 +55,14 @@ python final_model.py
 
 Generate and visualize predictions on an out-of-distribution (OOD) video using a pretrained YOLO model:
 ```sh
-python video.py
+python video.py --video <path_to_video>
 ```
 
 ### Predict on a Single Image
 
 Generate and visualize predictions on a single image using a pretrained YOLO model:
 ```sh
-python predict.py
+python predict.py --image <path_to_image>
 ```
 
 ## Dataset Configuration Files
