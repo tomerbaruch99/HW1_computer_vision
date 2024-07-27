@@ -1,72 +1,103 @@
-# HW1: Computer Vision
+Sure! Here's a `README.md` file for your project:
 
-This repository contains the code and resources for Homework 1 of the Computer Vision course. The project involves visualizing predictions from a trained model on video data, drawing bounding boxes around detected objects, and annotating them with class labels and confidence scores.
+```markdown
+# YOLO Model Training and Pseudo-Label Generation
 
-## Table of Contents
+This project focuses on training YOLO models using labeled data and pseudo-labeled data generated from videos. The repository includes scripts for creating dataset configurations, training models, generating pseudo-labels, and visualizing predictions.
 
-- [Introduction](#introduction)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Files and Directories](#files-and-directories)
-- [Contributing](#contributing)
-- [License](#license)
+## Project Structure
 
-## Introduction
+- `create_yamls.py`: Creates YAML configuration files for training YOLO models.
+- `train.py`: Trains a YOLO model using the original labeled dataset.
+- `generate_pseudo_labels.py`: Generates pseudo-labels from videos using a pretrained YOLO model and combines them with the original dataset.
+- `final_model.py`: Trains a YOLO model using the combined dataset (original and pseudo-labeled data).
+- `video.py`: Generates predictions on an out-of-distribution (OOD) video using a pretrained YOLO model and visualizes the predictions.
+- `predict.py`: Generates predictions on a single image using a pretrained YOLO model and visualizes the predictions.
+- `requirements.txt`: Lists the Python package dependencies for the project.
+- `dataset.yaml`: Configuration file for the original dataset.
+- `combined_dataset.yaml`: Configuration file for the combined dataset.
 
-This project demonstrates how to process video data using a deep learning model for object detection. It reads a video file, runs the model to detect objects in each frame, and visualizes the results by drawing bounding boxes and labels around detected objects.
-
-## Requirements
-
-- Python 3.6 or higher
-- OpenCV
-- PyTorch
-- A compatible deep learning model for object detection
-
-## Installation
+## Setup
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/tomerbaruch99/HW1_computer_vision.git
-    cd HW1_computer_vision
+    git clone https://github.com/yourusername/your-repo.git
+    cd your-repo
     ```
 
-2. **Create and activate a virtual environment** (optional but recommended):
-    ```sh
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. **Install the required packages**:
+2. **Install the required packages**:
     ```sh
     pip install -r requirements.txt
     ```
 
 ## Usage
 
-1. **Prepare your video file**:
-   Ensure your video file is in a format compatible with OpenCV, such as MP4.
+### Create YAML Configuration Files
 
-2. **Prepare your model**:
-   Load or download a pre-trained model compatible with the object detection task.
+Generate the YAML configuration files for the original and combined datasets:
+```sh
+python create_yamls.py
+```
 
-3. **Run the visualization script**:
-    ```sh
-    python vizualization.py
-    ```
+### Train YOLO Model on Original Dataset
 
-   Modify the script to specify the path to your video file and output file, as well as the model to be used for predictions.
+Train a YOLO model using the original labeled dataset:
+```sh
+python train.py
+```
 
-### Example
+### Generate Pseudo-Labels
 
-```python
-from your_model_module import load_model
+Generate pseudo-labels from videos using a pretrained YOLO model and combine them with the original dataset:
+```sh
+python generate_pseudo_labels.py
+```
 
-# Load your model
-model = load_model()
+### Train YOLO Model on Combined Dataset
 
-# Define the classid to classname mapping
-classid_classname = {0: "Class1", 1: "Class2", ...}
+Train a YOLO model using the combined dataset (original and pseudo-labeled data):
+```sh
+python final_model.py
+```
 
-# Run the visualization
-visualize_predictions('path/to/your/video.mp4', 'path/to/output/video.mp4', model, classid_classname)
+### Visualize Predictions on OOD Video
+
+Generate and visualize predictions on an out-of-distribution (OOD) video using a pretrained YOLO model:
+```sh
+python video.py
+```
+
+### Predict on a Single Image
+
+Generate and visualize predictions on a single image using a pretrained YOLO model:
+```sh
+python predict.py
+```
+
+## Dataset Configuration Files
+
+- `dataset.yaml`: Configuration file for the original labeled dataset.
+- `combined_dataset.yaml`: Configuration file for the combined dataset (original and pseudo-labeled data).
+
+## Requirements
+
+- opencv-python
+- numpy
+- torch
+- torchvision
+- ultralytics==8.2.62
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Ultralytics YOLO](https://github.com/ultralytics/yolov5) for the YOLO model implementation.
+
+---
+
+Feel free to modify the paths and parameters in the scripts according to your setup and requirements.
+```
+
+Replace `https://github.com/yourusername/your-repo.git` with the actual URL of your repository. This `README.md` file provides a comprehensive overview of the project, including setup instructions, usage examples, and descriptions of each script.
