@@ -4,7 +4,6 @@ This project focuses on training YOLO models using labeled data and pseudo-label
 
 ## Project Structure
 
-- `create_yamls.py`: Creates YAML configuration files for training YOLO models.
 - `train.py`: Trains a YOLO model using the original labeled dataset.
 - `generate_pseudo_labels.py`: Generates pseudo-labels from videos using a pretrained YOLO model and combines them with the original dataset.
 - `final_model.py`: Trains a YOLO model using the combined dataset (original and pseudo-labeled data).
