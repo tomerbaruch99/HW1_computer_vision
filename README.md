@@ -1,6 +1,3 @@
-Sure! Here's a `README.md` file for your project:
-
-```markdown
 # YOLO Model Training and Pseudo-Label Generation
 
 This project focuses on training YOLO models using labeled data and pseudo-labeled data generated from videos. The repository includes scripts for creating dataset configurations, training models, generating pseudo-labels, and visualizing predictions.
@@ -21,7 +18,7 @@ This project focuses on training YOLO models using labeled data and pseudo-label
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/your-repo.git
+    git clone https://github.com/tomerbaruch99/HW1_computer_vision
     cd your-repo
     ```
 
@@ -93,11 +90,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
-- [Ultralytics YOLO](https://github.com/ultralytics/yolov5) for the YOLO model implementation.
+- [Ultralytics YOLO](https://github.com/ultralytics/yolov8) for the YOLO model implementation.
 
 ---
-
-Feel free to modify the paths and parameters in the scripts according to your setup and requirements.
-```
-
-Replace `https://github.com/yourusername/your-repo.git` with the actual URL of your repository. This `README.md` file provides a comprehensive overview of the project, including setup instructions, usage examples, and descriptions of each script.
