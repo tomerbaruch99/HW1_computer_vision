@@ -39,7 +39,7 @@ python train.py
 
 ### Generate Pseudo-Labels
 
-Generate pseudo-labels from videos using a pretrained YOLO model and combine them with the original dataset:
+Generate pseudo-labels from the id videos using a pretrained YOLO model and combine them with the original dataset:
 ```sh
 python generate_pseudo_labels.py
 ```
@@ -51,9 +51,9 @@ Train a YOLO model using the combined dataset (original and pseudo-labeled data)
 python final_model.py
 ```
 
-### Visualize Predictions on OOD Video
+### Visualize Predictions on a Video
 
-Generate and visualize predictions on an out-of-distribution (OOD) video using a pretrained YOLO model:
+Generate and visualize predictions on a video (for example an out-of-distribution (OOD) video) using a pretrained YOLO model:
 ```sh
 python video.py --video <path_to_video>
 ```
