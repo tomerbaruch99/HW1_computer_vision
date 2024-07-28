@@ -2,7 +2,7 @@
 
 This project focuses on training YOLO models using labeled data and pseudo-labeled data generated from videos. The repository includes scripts for creating dataset configurations, training models, generating pseudo-labels, and visualizing predictions.
 
-url for the model weights: [best.pt](url)
+url for the model weights: [best.pt](https://technionmail-my.sharepoint.com/:u:/r/personal/tomer_baruch_campus_technion_ac_il/Documents/best.pt?csf=1&web=1&e=zy01g0)
 
 ## Project Structure
 
