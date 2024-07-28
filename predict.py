@@ -27,7 +27,7 @@ def predict_image(image_path, model, classid_classname, output_path, save_dir='.
             cv2.putText(image, f'{classid_classname[class_id]}  {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.7, (255, 153, 255), 4) # (178, 102, 255)
         if labels:
             image_path = os.path.join(save_dir, "image.jpg")
-            label_path = os.path.join(save_dir, "label.txt")
+            label_path = os.path.join(save_dir, "labels.txt")
             cv2.imwrite(image_path, image)
             with open(label_path, 'w') as f:
                 for label in labels:
