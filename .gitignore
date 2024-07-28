@@ -18,7 +18,7 @@ ood*/
 output.jpg
 .gitconfig
 graphs.py
-video_prediction/
+video_predictions/
 finetunning*
 train_val*
 image_prediction.jpg
