@@ -17,3 +17,8 @@ yolov8n.pt
 ood*/
 output.jpg
 .gitconfig
+graphs.py
+video_prediction/
+finetunning*
+train_val*
+image_prediction.jpg
