@@ -11,7 +11,7 @@ runs/
 .e*
 .p*
 .w*
-*.yaml
+# *.yaml
 yolov8n.pt
 *.mp4
 ood*/

@@ -9,7 +9,7 @@ def predict_image(image_path, model, classid_classname, output_path):
     for result in results:
         for box in result.boxes:
             x1, y1, x2, y2 = [int(box.xyxy[0][i].item()) for i in range(4)]
-            cv2.rectangle(image, (x1, y1), (x2, y2), (255, 153, 255), 5) # (204, 255, 204) (127, 0, 255)
+            cv2.rectangle(image, (x1, y1), (x2, y2), (255, 153, 255), 5)
             class_id = int(box.cls.item())
             confidence = float(box.conf.item())
             cv2.putText(image, f'{classid_classname[class_id]}  {confidence:.2f}', (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.7, (255, 153, 255), 4) # (178, 102, 255)

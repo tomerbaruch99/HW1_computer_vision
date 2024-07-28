@@ -1,0 +1,7 @@
+names:
+- Empty
+- Tweezers
+- Needle_driver
+nc: 3
+train: /home/student/pseudo_data/images
+val: /datashare/HW1/labeled_image_data/images/val
