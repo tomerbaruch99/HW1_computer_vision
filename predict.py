@@ -19,22 +19,16 @@ def predict_image(image_path, model, classid_classname, output_path):
 
 if __name__ == '__main__':
 
-    # best
-    # model = YOLO('./runs/detect/train5/weights/best.pt') # ood_predictions1 # train3 --> train5 both id
+    # example_image_path = '/datashare/HW1/labeled_image_data/images/train/20_2_24_1_1.jpg'
 
-    # worst
-    # model = YOLO('./runs/detect/train8/weights/best.pt') # ood_predictions4 # train7 --> train8 both id
-
-    # WOW on the picture looking good
-    # model = YOLO('./runs/detect/train10/weights/best.pt') # ood_predictions4 # train9 --> train10 both id
     parser = argparse.ArgumentParser(description="Predict YOLO on an Image")
     parser.add_argument('--image', type=str, required=True, help="Path to the image file")
     args = parser.parse_args()
-    if not args.video:
+    if not args.image:
         print("Please provide the path to the image file")
         exit()
 
-    model = YOLO('./runs/detect/train13/weights/best.pt') # ood_predictions4 # train9 --> train10 both id
+    model = YOLO('./best.pt')
     classid_classname = {0: 'Empty', 1: 'Tweezers', 2: 'Needle_driver'}
 
     predict_image(args.image, model, classid_classname, './image_prediction.jpg')
